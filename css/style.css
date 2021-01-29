@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    font-family: "Comic Sans MS";
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: 50px auto 50px;
+    grid-template-columns: 
+        "header"
+        "content"
+        "footer";
+}
+
+header {
+    min-width: 100%;
+    grid-area: "header";
+}
+
+#titleLogo{
+    max-width: 100%;
+}
