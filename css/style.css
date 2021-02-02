@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     font-family: "Comic Sans MS";
     display: grid;
@@ -13,8 +13,9 @@ body {
 header {
     min-width: 100%;
     grid-area: "header";
+    text-align: center;
 }
 
 #titleLogo{
     max-width: 100%;
-}
+} */

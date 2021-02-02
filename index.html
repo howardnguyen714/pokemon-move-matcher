@@ -15,7 +15,7 @@
     </header>
     <main>
         <form id = "form">
-            <input type="text" id="pokemonInput">
+            <input type="text" required id="pokemonInput">
             <select name="Move Type" id="moveInput">
                 <option value="0">All</option>
                 <option value="1">Normal</option>
@@ -40,6 +40,17 @@
             <input type="submit" id = "submit">
         </form>
     </main>
-    
+    <div id = "table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Move</th>
+                </tr>
+            </thead>
+            <tbody id = "tbody">
+
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
