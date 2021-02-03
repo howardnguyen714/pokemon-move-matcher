@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP/ExMT/xMTE/8TExP/ExMT/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////////////////////////xMTE/8TExP/ExMT/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////8AAAD/AAAA/8TExP/ExMT/xMTE/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////AAAA/wAAAP8AAAD/xMTE/8TExP8AAAD/AAAA/wAAAP/ExMT/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAA//8AAP//AAAA///////ExMT/AAAA/ysrvf8rK73/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/wAA//8AAP//AAD//wAA//8AAAD/AAAA/ysrvf8rK73/Kyu9/ysrvf8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAP//AAD//wAA//8AAP+uAAD//wAA//8AAP//Kyu9/ysrvf8rK73/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAA//8AAP+u/////wAA/64AAP//AAD//ysrvf8rK73/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAP//AAD//wAA/64AAP//Kyu9/ysrvf8rK73/Kyu9/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAP//Kyu9/ysrvf8rK73/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD8PwAA8A8AAOAHAADgBwAAwAMAAMADAADAAwAAwAMAAOAHAADgBwAA8A8AAPw/AAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script defer src = "js/app.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Pokémon Move Matcher</title>
 </head>
 <body>
@@ -37,14 +41,18 @@
                 <option value="17">Dark</option>
                 <option value="18">Fairy</option>
             </select>
-            <input type="submit" id = "submit">
+            <input type="submit" id = "submit" value = "Match!">
         </form>
     </main>
+    <div id = "pokemonImageContainer"></div>
     <div id = "table">
-        <table>
-            <thead>
+        <table class = "table table-hover table-sm">
+            <thead class = "thead-dark">
                 <tr>
                     <th>Move</th>
+                    <th>Power</th>
+                    <th>Accuracy</th>
+                    <th>Category</th>
                 </tr>
             </thead>
             <tbody id = "tbody">
