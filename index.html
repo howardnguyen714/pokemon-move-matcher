@@ -3,50 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    
+    <!-- Favicon -->
     <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP/ExMT/xMTE/8TExP/ExMT/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////////////////////////xMTE/8TExP/ExMT/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP////////////////8AAAD/AAAA/8TExP/ExMT/xMTE/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////AAAA/wAAAP8AAAD/xMTE/8TExP8AAAD/AAAA/wAAAP/ExMT/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAA/wAA//8AAP//AAAA///////ExMT/AAAA/ysrvf8rK73/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAA/wAA//8AAP//AAD//wAA//8AAAD/AAAA/ysrvf8rK73/Kyu9/ysrvf8AAAD/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAP//AAD//wAA//8AAP+uAAD//wAA//8AAP//Kyu9/ysrvf8rK73/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAA//8AAP+u/////wAA/64AAP//AAD//ysrvf8rK73/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAP//AAD//wAA/64AAP//Kyu9/ysrvf8rK73/Kyu9/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAP//Kyu9/ysrvf8rK73/AAAA/wAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAP8AAAD/AAAA/wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAD8PwAA8A8AAOAHAADgBwAAwAMAAMADAADAAwAAwAMAAOAHAADgBwAA8A8AAPw/AAD//wAA//8AAA==" rel="icon" type="image/x-icon" />
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script defer src = "js/app.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- SortTable -->
+    <!-- Code found at the following link: https://github.com/stationer/SortTable -->
+    <script defer src="./js/sort-table.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src = "js/app.js"></script>
     <title>Pokémon Move Matcher</title>
 </head>
 <body>
     <header>
-        <!-- <div id = "titleLogoContainer"><img id = "titleLogo" src="./images/logo.png" alt="pokemon logo"></div> -->
-        <h1>Move Matcher</h1>
+        <div class = "container">
+            <img class = "rounded mx-auto" id = "titleLogo" src="./images/logo.png" alt="pokemon logo">
+            <h1>Move Matcher</h1>
+        </div>        
     </header>
     <main>
-        <form id = "form">
-            <input type="text" required id="pokemonInput">
-            <select name="Move Type" id="moveInput">
-                <option value="0">All</option>
-                <option value="1">Normal</option>
-                <option value="2">Fighting</option>
-                <option value="3">Flying</option>
-                <option value="4">Poison</option>
-                <option value="5">Ground</option>
-                <option value="6">Rock</option>
-                <option value="7">Bug</option>
-                <option value="8">Ghost</option>
-                <option value="9">Steel</option>
-                <option value="10">Fire</option>
-                <option value="11">Water</option>
-                <option value="12">Grass</option>
-                <option value="13">Electric</option>
-                <option value="14">Psychic</option>
-                <option value="15">Ice</option>
-                <option value="16">Dragon</option>
-                <option value="17">Dark</option>
-                <option value="18">Fairy</option>
-            </select>
-            <input type="submit" id = "submit" value = "Match!">
-        </form>
+        <div class = "container" id = "formDiv">
+            <form id = "form" class = "form-inline">
+                <input type="text" class = "form-control" required id="pokemonInput" placeholder="Pokémon Name">
+                <select name="Move Type" id="moveInput" class = "form-control">
+                    <option value="0">All</option>
+                    <option value="1">Normal</option>
+                    <option value="2">Fighting</option>
+                    <option value="3">Flying</option>
+                    <option value="4">Poison</option>
+                    <option value="5">Ground</option>
+                    <option value="6">Rock</option>
+                    <option value="7">Bug</option>
+                    <option value="8">Ghost</option>
+                    <option value="9">Steel</option>
+                    <option value="10">Fire</option>
+                    <option value="11">Water</option>
+                    <option value="12">Grass</option>
+                    <option value="13">Electric</option>
+                    <option value="14">Psychic</option>
+                    <option value="15">Ice</option>
+                    <option value="16">Dragon</option>
+                    <option value="17">Dark</option>
+                    <option value="18">Fairy</option>
+                </select>
+                <input type="submit" id = "submit" value = "Match!" class = "form-control">
+            </form>
+        </div>
     </main>
-    <div id = "pokemonImageContainer"></div>
-    <div id = "table">
-        <table class = "table table-hover table-sm">
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-md" id = "pokemonImageContainer">
+                <h2 id = "pokemonName">Placeholder</h2>
+            </div>
+        </div>
+    </div>
+    <div class = "container" id = "table">
+        <table class = "table table-hover table-sm table-bordered js-sort-table">
             <thead class = "thead-dark">
                 <tr>
                     <th>Move</th>

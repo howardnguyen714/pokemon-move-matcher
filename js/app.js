@@ -10,6 +10,8 @@ let intersectArray = []
 let tbody = document.querySelector("#tbody")
 let imageContainer = document.querySelector("#pokemonImageContainer")
 let image = document.createElement("img")
+image.setAttribute("id", "pokemonImage")
+let pokemonName = document.querySelector("#pokemonName")
 
 function moveIntersect () {
 // Isolates moves found in both pokemonObject and in moveTypeObject and adds them to intersectArray
@@ -42,9 +44,9 @@ function matchMoves () {
 // Fetches API objects for the selected pokemon and move type
     // make fetch request for pokemon
     let pokemon = document.querySelector("#pokemonInput")
-    console.log(pokemonRequestUrl+pokemon.value)
+    console.log(pokemonRequestUrl+pokemon.value.toLowerCase())
     
-    fetch(pokemonRequestUrl + pokemon.value)
+    fetch(pokemonRequestUrl + pokemon.value.toLowerCase())
         .then((responseData) => {
             return responseData.json()
         })
@@ -77,7 +79,7 @@ function matchMoves () {
 }
 
 function makeRow () {
-    setPokemonImage()
+    setPokemonImageAndName()
     // Creates a table row that includes details about a move
     for (move in intersectArray) {
         let tr = document.createElement("tr")
@@ -126,15 +128,21 @@ function titleCase(str) {
     return str.join(' ');
 }
 
-function setPokemonImage() {
+function setPokemonImageAndName() {
     image.src = pokemonObject.sprites.other["official-artwork"].front_default
     imageContainer.append(image)
+    pokemonName.textContent = titleCase(pokemonObject.name)
+    pokemonName.style.visibility = "visible"
 }
 
 form.addEventListener("submit", (evt) => {
     evt.preventDefault()
     
+    document.querySelector("#table").style.visibility = "visible"
+
     image.src = ""
+
+    pokemonName.textContent = ""
 
     if(tbody.childElementCount > 0) {
         tbody.innerHTML = ""

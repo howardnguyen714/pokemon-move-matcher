@@ -1,21 +1,39 @@
-/* body {
-    margin: 0;
-    font-family: "Comic Sans MS";
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-columns: 50px auto 50px;
-    grid-template-columns: 
-        "header"
-        "content"
-        "footer";
+#titleLogo {
+    object-fit: scale-down;
+    height: 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-header {
-    min-width: 100%;
-    grid-area: "header";
+h1 {
     text-align: center;
 }
 
-#titleLogo{
+#pokemonImage {
+    object-fit: scale-down;
     max-width: 100%;
-} */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#table {
+    visibility: hidden;
+}
+
+#pokemonName {
+    padding-top: 30px;
+    text-align: center;
+    visibility: hidden;
+}
+
+#pokemonInput,#moveInput,#submit {
+    border-color: black;
+    border-radius: 0%;
+    margin: 5px;
+}
+
+#submit {
+    text-align: left;
+}
