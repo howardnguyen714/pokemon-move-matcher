@@ -1,5 +1,3 @@
-console.log("Sanity Check!")
-
 let pokemonRequestUrl = "https://pokeapi.co/api/v2/pokemon/"
 let moveTypeRequestUrl = "https://pokeapi.co/api/v2/type/"
 let moveRequestUrl = "https://pokeapi.co/api/v2/move/"
@@ -13,18 +11,19 @@ let image = document.createElement("img")
 image.setAttribute("id", "pokemonImage")
 let pokemonName = document.querySelector("#pokemonName")
 
+
 function matchMoves () {
     // Fetches API objects for the selected pokemon and move type
         // make fetch request for pokemon
         let pokemon = document.querySelector("#pokemonInput")
-        console.log(pokemonRequestUrl+pokemon.value.toLowerCase())
+        // console.log(pokemonRequestUrl+pokemon.value.toLowerCase())
         
         fetch(pokemonRequestUrl + pokemon.value.toLowerCase())
             .then((responseData) => {
                 return responseData.json()
             })
             .then((jsonData) => {
-                console.log("this is the pokemon data", jsonData)
+                // console.log("this is the pokemon data", jsonData)
                 pokemonObject = jsonData
             })
             .catch((error) => {
@@ -34,22 +33,23 @@ function matchMoves () {
         
         // make fetch request for move type if the user does not select "all" as the type
         let moveType = document.querySelector("#moveInput")
-        console.log(moveTypeRequestUrl+moveType.value)
+        // console.log(moveTypeRequestUrl+moveType.value)
         if (moveType.value != 0) {
             fetch(moveTypeRequestUrl+moveType.value)
                 .then((responseData) => {
                     return responseData.json()
                 })
                 .then((jsonData) => {
-                    console.log("this is the move type data", jsonData)
+                    // console.log("this is the move type data", jsonData)
                     moveTypeObject = jsonData
                 })
                 .catch((error) => {
                     console.error("ERROR: ", error)
                 })
         }
-        console.log("matchMoves has been called")
+        // console.log("matchMoves has been called")
 }
+
 
 function moveIntersect () {
 // Isolates moves found in both pokemonObject and in moveTypeObject and adds them to intersectArray
@@ -74,9 +74,10 @@ function moveIntersect () {
         }
     }
 
-    console.log("moveIntersect has completed")
-    console.log("intersectArray:", intersectArray)
+    // console.log("moveIntersect has completed")
+    // console.log("intersectArray:", intersectArray)
 }
+
 
 function makeRow () {
     setPokemonImageAndName()
@@ -94,7 +95,7 @@ function makeRow () {
             })
             .then((jsonData) => {
                 moveObject = jsonData
-                console.log("this is the move data", moveObject)
+                // console.log("this is the move data", moveObject)
                 return moveObject
             })
             .then((moveObject) => {
@@ -115,8 +116,9 @@ function makeRow () {
                 console.error("ERROR: ", error)
             })    
     }
-    console.log("makeRow has been called")
+    // console.log("makeRow has been called")
 }
+
 
 // The following function was provided by freeCodeCamp and can be found at the following link:
 // https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/
@@ -128,6 +130,7 @@ function titleCase(str) {
     return str.join(' ');
 }
 
+
 function setPokemonImageAndName() {
     image.src = pokemonObject.sprites.other["official-artwork"].front_default
     imageContainer.append(image)
@@ -135,15 +138,13 @@ function setPokemonImageAndName() {
     pokemonName.style.visibility = "visible"
 }
 
+
 form.addEventListener("submit", (evt) => {
     evt.preventDefault()
-    
     document.querySelector("#table").style.visibility = "visible"
-
     image.src = ""
-
     pokemonName.textContent = ""
-
+    
     if(tbody.childElementCount > 0) {
         tbody.innerHTML = ""
     }

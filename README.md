@@ -24,6 +24,7 @@ Pokemon Move Matcher allows users to select a Pokemon (ex. Pikachu) and a move t
 **Unsolved problems**
 
 * Spelling validation
+* Table sorting
 
 **Major hurdles**
 
