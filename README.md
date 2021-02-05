@@ -1,7 +1,7 @@
 # Pokemon Move Matcher
 Pokemon Move Matcher allows users to select a Pokemon (ex. Pikachu) and a move type (ex. water). Returns all the moves of that type that the specified Pokemon can learn.
 
-An embedded screenshot of the app
+![alt text](https://github.com/howardnguyen714/pokemon-move-master/blob/main/images/app-screenshot.png?raw=true)
 
 **Technologies Used**
 
@@ -17,7 +17,9 @@ An embedded screenshot of the app
 * As a user, I want the page to be mobile friendly, so that I can continue to use the page when I am not on a desktop.
 * As a user, I want to be able to search various Pokemon/moves without having to refresh the page, so that the page is easier to use.
 
-**Wireframes**
+**Wireframe**
+
+![alt text](https://github.com/howardnguyen714/pokemon-move-master/blob/main/images/app-screenshot.png?raw=true)
 
 **Unsolved problems**
 
