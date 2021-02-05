@@ -13,10 +13,6 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- SortTable -->
-    <!-- Code found at the following link: https://github.com/stationer/SortTable -->
-    <script defer src="./js/sort-table.js"></script>
-
     <link rel="stylesheet" href="css/style.css">
     <script defer src = "js/app.js"></script>
     <title>Pokémon Move Matcher</title>
@@ -28,35 +24,33 @@
             <h1>Move Matcher</h1>
         </div>        
     </header>
-    <main>
-        <div class = "container" id = "formDiv">
-            <form id = "form" class = "form-inline">
-                <input type="text" class = "form-control" required id="pokemonInput" placeholder="Pokémon Name">
-                <select name="Move Type" id="moveInput" class = "form-control">
-                    <option value="0">All</option>
-                    <option value="1">Normal</option>
-                    <option value="2">Fighting</option>
-                    <option value="3">Flying</option>
-                    <option value="4">Poison</option>
-                    <option value="5">Ground</option>
-                    <option value="6">Rock</option>
-                    <option value="7">Bug</option>
-                    <option value="8">Ghost</option>
-                    <option value="9">Steel</option>
-                    <option value="10">Fire</option>
-                    <option value="11">Water</option>
-                    <option value="12">Grass</option>
-                    <option value="13">Electric</option>
-                    <option value="14">Psychic</option>
-                    <option value="15">Ice</option>
-                    <option value="16">Dragon</option>
-                    <option value="17">Dark</option>
-                    <option value="18">Fairy</option>
-                </select>
-                <input type="submit" id = "submit" value = "Match!" class = "form-control">
-            </form>
-        </div>
-    </main>
+    <div class = "container" id = "formDiv">
+        <form id = "form" class = "form-inline">
+            <input type="text" class = "form-control" required id="pokemonInput" placeholder="Pokémon Name">
+            <select name="Move Type" id="moveInput" class = "form-control">
+                <option value="0">All</option>
+                <option value="1">Normal</option>
+                <option value="2">Fighting</option>
+                <option value="3">Flying</option>
+                <option value="4">Poison</option>
+                <option value="5">Ground</option>
+                <option value="6">Rock</option>
+                <option value="7">Bug</option>
+                <option value="8">Ghost</option>
+                <option value="9">Steel</option>
+                <option value="10">Fire</option>
+                <option value="11">Water</option>
+                <option value="12">Grass</option>
+                <option value="13">Electric</option>
+                <option value="14">Psychic</option>
+                <option value="15">Ice</option>
+                <option value="16">Dragon</option>
+                <option value="17">Dark</option>
+                <option value="18">Fairy</option>
+            </select>
+            <input type="submit" id = "submit" value = "Match!" class = "form-control">
+        </form>
+    </div>
     <div class = "container">
         <div class = "row">
             <div class = "col-md" id = "pokemonImageContainer">
@@ -65,7 +59,7 @@
         </div>
     </div>
     <div class = "container" id = "table">
-        <table class = "table table-hover table-sm table-bordered js-sort-table">
+        <table class = "table table-hover table-sm table-bordered">
             <thead class = "thead-dark">
                 <tr>
                     <th>Move</th>

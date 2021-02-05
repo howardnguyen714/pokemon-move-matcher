@@ -1,6 +1,6 @@
 #titleLogo {
     object-fit: scale-down;
-    height: 75px;
+    height: 100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -8,6 +8,17 @@
 
 h1 {
     text-align: center;
+    font-size: 30pt;
+}
+
+h2 {
+    font-size: 40pt;
+    font-weight: 500;
+}
+
+#formDiv {
+    display: flex;
+    justify-content: center;
 }
 
 #pokemonImage {
