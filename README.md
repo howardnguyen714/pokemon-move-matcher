@@ -1,5 +1,5 @@
 # Pokemon Move Matcher
-Pokemon Move Matcher allows users to select a Pokemon (ex. Pikachu) and a move type (ex. water). Returns all the moves of that type that the specified Pokemon can learn.
+[Pokemon Move Matcher](https://howardnguyen714.github.io/pokemon-move-matcher/) allows users to select a Pokemon (ex. Pikachu) and a move type (ex. water). Returns all the moves of that type that the specified Pokemon can learn.
 
 ![app screenshot](https://github.com/howardnguyen714/pokemon-move-matcher/blob/main/images/app-screenshot.png)
 
